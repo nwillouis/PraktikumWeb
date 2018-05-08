@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>NWILLOUIS</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <style>
+    .p2 {
+      text-align: justify;
+    }
+  </style>
+  <body>
+
+    <!--NAVBAR-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="nwillouis.png" width="30" height="30" class="d-inline-block align-top" >
+          NWILLOUIS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ">
+            <li class="nav-item ">
+              <a class="nav-link" href="append.html">Form Input <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="function.html">Validasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+    <!--Append-->
+    <center>
+      <br>
+      <br>
+      <table>
+        <tr>
+          <td colspan="2"><b>FORM INPUT </b></td>
+        </tr>
+        <tr>
+          <td>Nama :</td>
+          <td><input id="nama"></td>
+        </tr>
+        <tr>
+          <td>Alamat :</td>
+          <td><textarea id="alamat"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button type="button" onclick="simpan()">Save</button></td>
+        </tr>
+      </table>
+      <br>
+      <table border="1" width="300" id="data">
+        <td>Nama</td>
+        <td>Alamat</td>
+      </table>
+
+      <script>
+        function simpan() {
+          var nama = $("#nama").val();
+          var alamat = $("#alamat").val();
+
+          $("#data").append('<tr><td>'+nama+'</td><td>'+alamat+'</td></tr>');
+
+          $("#nama").val('');
+          $("#alamat").val('');
+          $("nama").focus('');
+        }
+      </script>
+
+      <br>
+      <br>
+      <div class="container">
+        <h5>keterangan</h5>
+        <p class="p1"><i>append child menggunakan jquery dan html.</i></p>
+        <p class="p2">
+          Isi Nama dan Alamat dan tekan tombol Save maka data akan tersimpan di tabel bawah.Untuk membuat append child dengan jquery akan lebih sangat mudah daripada dengan native javascript karna anda akan sedikit terbantu dengan tag yang sangat minim. Untuk membuat form input dengan javascript dan html cukup download terlebih dahulu jquery yang akan kita gunakan. anda bisa mendowload jquery di sini
+          <a href="https://code.jquery.com/jquery-3.0.0.min.js">https://code.jquery.com/jquery-3.0.0.min.js</a></p>
+      </div>
+    </center>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    
+
+  </body>
+</html>
